@@ -1,0 +1,31 @@
+{
+  "name": "newsfinder",
+  "version": "1.0.0",
+  "description": "<details> <summary>Транскрипция звонка</summary> <p> Я слышал, что вы крутые программисты и можете написать программу, которая будет искать в интернетах вместо меня! Я хочу получить сайт, где я мог бы найти все положительные новости.  Или новости по ключевым словам!  Сделайте поля, где я мог бы добавить ключевые слова по которым я хочу видеть новости и по которым не хочу. Например: в первое поле (любимые темы новостей) я ввожу слово \"Рестораны\", и мне отображаются все новости, в которых есть это слово. Во второе поле (нелюбимые темы новостей) я ввожу слово \"Финансы\" и портал мне выдаёт все новости в которых есть слово \"Рестораны\", кроме тех, в которых есть слово \"Финансы\". Подключите популярные новостные порталы:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrebnitskyKirill/NewsFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrebnitskyKirill/NewsFinder/issues"
+  },
+  "homepage": "https://github.com/DrebnitskyKirill/NewsFinder#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.0",
+    "hbs": "^4.2.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  }
+}
