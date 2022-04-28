@@ -2,7 +2,14 @@ const router = require('express').Router();
 
 router
 .get('/', (req, res) => {
-  res.render('main')
+if(req.session.isAuthorized){
+  isAuthorized = false;
+} else {
+  isAuthorized = true;
+}
+
+  res.render('main', {isAuthorized})
+
 })
 
 module.exports = router
