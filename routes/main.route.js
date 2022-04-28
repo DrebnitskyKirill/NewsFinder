@@ -22,10 +22,10 @@ router
     
     if (thisWord) {
       const allGood = (await Good_word.findAll({ raw: true })).pop().count
-      console.log(allGood)
+      const x = allGood+1
       const wordGood = await Good_word.create({
         word: goodWord,
-        count:1,
+        count:x,
         user_id: req.session.sid,
       });
       
