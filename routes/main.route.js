@@ -15,13 +15,15 @@ router.route('/')
 // закидываем в бд Good_word
 
   .post(async (req, res) => {
-    const { word , count} = req.body;
+
+    const { goodWord , count} = req.body;
+    console.log(goodWord)
     // try{
     //   const checkGood = await Good_word.findOne({
     //     where:{word}
     //   })
     // }
-    const wordGood = await Good_word.create({ word, count });
+    const wordGood = await Good_word.create({ word:goodWord, count:'0', user_id: 1  });
   });
 
 module.exports = router;
