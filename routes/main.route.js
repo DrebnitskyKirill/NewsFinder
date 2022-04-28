@@ -19,20 +19,28 @@ router
   .post(async (req, res) => {
     const { goodWord, count, badWord } = req.body;
     const thisWord = await Good_word.findOne({ where: { word: goodWord } });
-    const x = await thisWord.dataValues.count + 1;
-    console.log(x);
-
+    
     if (thisWord) {
+      const allGood = (await Good_word.findAll({ raw: true })).pop().count
+      console.log(allGood)
       const wordGood = await Good_word.create({
         word: goodWord,
-        count:x,
+        count:1,
         user_id: req.session.sid,
       });
+      
 
       const wordBAd = await Bad_word.create({
         word: badWord,
         user_id: req.session.sid,
       });
+    } else{
+      const wordGood = await Good_word.create({
+        word: goodWord,
+        count:1,
+        user_id: req.session.sid,
+      });
+      
     }
   });
 // .get((req, res) => {
