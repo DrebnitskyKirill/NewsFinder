@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +11,33 @@
 </head>
 <body>
 
-<div class="nav">
+
+  <body>
+   
+   {{#if isAuthorized}}
+     <div class="nav nav-css">
         <div class="nav_link">
-            <a class="nav_link_item" href="/registration">Зарегистрироваться</a>
+          <a class="nav_link_item" href="/registration">Зарегистрироваться</a>
         </div>
         <div class="nav_link">
-            <a class="nav_link_item" href="/email">Войти</a>
+          <a class="nav_link_item" href="/login">Войти</a>
         </div>
+
+    {{else}}
+    <div class="nav_link">
+          <a class="nav_link_item" href="/logout">Выйти</a>
+        </div>
+      {{/if}}
+       
+     
+      
+
+    </div>
+    <div class="container-css"> 
+      {{{body}}}
+    </div>
+  </body>
+
     </div>
 
   {{{body}}}
@@ -39,4 +59,5 @@
 <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fstatic.feed.rbc.ru%2Frbc%2Finternal%2Frss.rbc.ru%2Frbc.ru%2Fnews.rss&desc=1&utf=y&html=y">View RSS feed</a>
 </noscript>
 </body>
+
 </html>

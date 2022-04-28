@@ -1,0 +1,7 @@
+ {{#if isAuthorized}}
+  Email: {{user.email}}<br>
+ 
+  <a href="/logout">Выход</a>
+{{else}}
+  <a href="/login">Логин</a> <a href="/registration">Пароль</a>
+{{/if}} 
