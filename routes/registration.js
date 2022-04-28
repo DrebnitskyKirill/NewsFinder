@@ -1,12 +1,12 @@
-const router = require("express").Router();
-const bcrypt = require("bcrypt");
-const { User } = require("../db/models");
-const middleWare = require("../middleware/autoChecker");
+const router = require('express').Router();
+const bcrypt = require('bcrypt');
+const { User } = require('../db/models');
+const middleWare = require('../middleware/autoChecker');
 
 router
-  .route("/")
+  .route('/')
   .get(middleWare, (req, res) => {
-    res.render("registration");
+    res.render('registration');
   })
   .post(async (req, res) => {
     // регистрация, получаем email, password из формы
@@ -17,7 +17,7 @@ router
     const user = await User.findOne({ where: { email } });
 
     if (user) {
-      res.send("Такой пользователь уже есть!");
+      res.send('Такой пользователь уже есть!');
     } else {
       // создаём нового пользователя
       const newUser = await User.create({
@@ -30,7 +30,7 @@ router
       // сразу же авторизируем пользователя (кладём id в сессию)
       req.session.sid = newUser.id;
       req.session.isAuthorized = true;
-      res.redirect("/");
+      res.redirect('/');
     }
   });
 

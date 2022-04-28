@@ -1,12 +1,12 @@
-const router = require("express").Router();
-const bcrypt = require("bcrypt");
-const { User } = require("../db/models");
-const middleWare = require("../middleware/autoChecker");
+const router = require('express').Router();
+const bcrypt = require('bcrypt');
+const { User } = require('../db/models');
+const middleWare = require('../middleware/autoChecker');
 
 router
-  .route("/")
+  .route('/')
   .get(middleWare, (req, res) => {
-    res.render("login");
+    res.render('login');
   })
   .post(async (req, res) => {
     // авторизация, получаем email, password из формы
@@ -25,9 +25,9 @@ router
       // папке sessions с таким же именем и в этот файл уже кладётся uid
       req.session.sid = user.id;
       req.session.isAuthorized = true;
-      res.redirect("/");
+      res.redirect('/');
     } else {
-      res.send("Нет такого пользователя либо неверный пароль.");
+      res.send('Нет такого пользователя либо неверный пароль.');
     }
   });
 
