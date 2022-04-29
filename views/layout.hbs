@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>Verti by HTML5 UP</title>
+		<title>NewsFinder</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -24,31 +24,27 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li>
-								
-											
 									<li>{{#if isAuthorized}}
      <div class="nav nav-css">
         <div class="nav_link">
           <a class="nav_link_item" href="/registration">Зарегистрироваться</a>
         </div>
-        <div class="nav_link">
+        <li><div class="nav_link">
           <a class="nav_link_item" href="/login">Войти</a>
-        </div>
-
-    {{else}}</li>
+        </div></li>
+<li>
+       {{else}}</li>
 									
 									<li> <div class="nav_link">
           <a class="nav_link_item" href="/logout">Выйти</a>
         </div>
-      {{/if}}</li>
+       {{/if}}</li>
 								</ul>
 							</nav>
 
 					</header>
-				</div>
-
-			<!-- Banner -->
+			</div>
+<!-- Features !!!!!!!1-->
 				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
@@ -64,10 +60,12 @@
 						</div>
 					</div>
 				</div>
-
 			<!-- Features -->
 				<div id="features-wrapper">
 					<div class="container">
+                <section class="box feature">
+							<div class="innner"><h2>Главные новости к этому часу</h2></div>
+									</section>
 						<div class="row">
 							<div class="col-4 col-12-medium">
 

@@ -63,6 +63,7 @@ mark {
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+  
 }
 
 input, select, textarea {
@@ -118,7 +119,7 @@ input, select, textarea {
 		font-size: 13pt;
 		color: #696969;
 		font-weight: 300;
-		line-height: 2.25em;
+		line-height: 3em;
 	}
 
 	a {
@@ -1549,6 +1550,7 @@ input, select, textarea {
 
 	form ::-moz-focus-inner {
 		border: 0;
+    
 	}
 
 /* Tables */
@@ -1791,6 +1793,12 @@ input, select, textarea {
 
 			.box.feature .inner {
 				padding: 4em 2em 3em 2em;
+        
+			}
+      .box.feature .innner {
+				padding: 4em 2em 3em 2em;
+        text-align: center;
+        
 			}
 
 			.box.feature h2 {
@@ -2577,6 +2585,7 @@ input, select, textarea {
 
 					.box.feature .inner {
 						padding: 30px 15px 30px 15px;
+            
 					}
 
 					.box.feature p {
