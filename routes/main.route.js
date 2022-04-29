@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const res = require('express/lib/response');
-const { get } = require('express/lib/response');
+// const { get } = require('express/lib/response');
 const { Bad_word, Good_word } = require('../db/models');
 // KFKFKFKFKFKFKF
 
@@ -12,9 +12,9 @@ router
     } else {
       isAuthorized = true;
     }
-
     res.render('main', { isAuthorized });
   })
+
   // закидываем в бд Good_word и плохое слово тоже
 
   .post(async (req, res) => {
@@ -42,8 +42,5 @@ router
       });
     }
   });
-// .get((req, res) => {
-//   res.render('main')
-// })
 
 module.exports = router;

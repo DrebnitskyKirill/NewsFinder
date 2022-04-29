@@ -1,3 +1,4 @@
+
 const news = document.querySelector('#news')
 const rss = document.querySelector('.rss-items')
 // console.log(news)
@@ -7,3 +8,4 @@ const rss = document.querySelector('.rss-items')
 
 let rssWords = rss.innerText.split(' ')
 console.log(rssWords)
+
