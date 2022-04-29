@@ -12,7 +12,7 @@ const morgan = require('morgan');
 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const sessionConfig = require('./sessionConfig.js');
+const sessionConfig = require('./sessionConfig');
 
 const config = (app) => {
   // set

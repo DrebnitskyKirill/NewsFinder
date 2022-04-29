@@ -6,7 +6,7 @@ const middleWare = require('../middleware/autoChecker');
 router
   .route('/')
   .get(middleWare, (req, res) => {
-    res.render('login');
+    res.render('res');
   })
   .post(async (req, res) => {
     // авторизация, получаем email, password из формы
