@@ -11,9 +11,10 @@ router
     } else {
       isAuthorized = true;
     }
+    res.render('main', { isAuthorized });
+  });
 
-    res.render("main", { isAuthorized });
-  })
+
   // закидываем в бд Good_word и плохое слово тоже
 
   .post(async (req, res) => {
@@ -43,8 +44,5 @@ router
       
     }
   });
-// .get((req, res) => {
-//   res.render('main')
-// })
 
 module.exports = router;
