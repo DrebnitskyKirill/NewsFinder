@@ -17,7 +17,7 @@ router
 
   // закидываем в бд Good_word и плохое слово тоже
 
-  .post(async (req, res) => {
+  router.post(async (req, res) => {
     const { goodWord, count, badWord } = req.body;
     const thisWordGood = await Good_word.findOne({ where: { word: goodWord } });
     const thisWordBad = await Bad_word.findOne({ where: { word: badWord } });
