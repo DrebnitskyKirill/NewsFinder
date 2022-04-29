@@ -7,7 +7,7 @@ const config = require('./config/config');
 // routers
 const mainRouter = require('./routes/main.route');
 const regRouter = require('./routes/registration');
-// const loginRouter = require('./routes/login');
+const loginRouter = require('./routes/email');
 const logoutRouter = require('./routes/logout.route');
 const middleWare = require('./middleware/autoChecker');
 
@@ -22,7 +22,7 @@ config(app);
 // routes
 app.use('/', mainRouter);
 app.use('/registration', regRouter);
-// app.use('/login', loginRouter);
+app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 
 //middleware
