@@ -11,7 +11,7 @@ router
   .post(async (req, res) => {
     // регистрация, получаем email, password из формы
     const { name, email, password } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
 
     // Проверяем, что пользователя с таким email нет в БД
     const user = await User.findOne({ where: { email } });
