@@ -1,12 +1,11 @@
-const rss = document.querySelector('.rss-box');
 
-rss.addEventListener('submit', async (event) => {
-  event.preventDefault();
+const news = document.querySelector('#news')
+const rss = document.querySelector('.rss-items')
+// console.log(news)
+// console.log(rss)
 
-  const text = await fetch('/', {
-    method: 'POST',
-    body: JSON.parse({
-      
-    })
-  })
-});
+
+
+let rssWords = rss.innerText.split(' ')
+console.log(rssWords)
+

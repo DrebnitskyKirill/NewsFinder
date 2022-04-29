@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 
 <html>
@@ -146,3 +147,74 @@ charset="UTF-8" type="text/javascript"></script>
 
 	</body>
 </html>
+=======
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+   <link rel="stylesheet" href="/css/news.css">
+  <title>Новости</title>
+  
+</head>
+<body>
+
+
+  <body>
+   
+   {{#if isAuthorized}}
+     <div class="nav nav-css">
+        <div class="nav_link">
+          <a class="nav_link_item" href="/registration">Зарегистрироваться</a>
+        </div>
+        <div class="nav_link">
+          <a class="nav_link_item" href="/login">Войти</a>
+        </div>
+
+    {{else}}
+    <div class="nav_link">
+          <a class="nav_link_item" href="/logout">Выйти</a>
+        </div>
+      {{/if}}
+       
+     
+      
+
+    </div>
+    <div class="container-css"> 
+      {{{body}}}
+    </div>
+  </body>
+
+    </div>
+
+
+  {{{body}}}
+  <div id="news">
+
+ <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Flenta.ru%2Frss%2Fnews&desc=1&utf=y"  
+ charset="UTF-8" type="text/javascript"></script>
+<noscript>
+<a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Flenta.ru%2Frss%2Fnews&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fria.ru%2Fexport%2Frss2%2Farchive%2Findex.xml&desc=1&utf=y"  
+charset="UTF-8" type="text/javascript"></script>
+<noscript>
+<a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fria.ru%2Fexport%2Frss2%2Farchive%2Findex.xml&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fstatic.feed.rbc.ru%2Frbc%2Finternal%2Frss.rbc.ru%2Frbc.ru%2Fnews.rss&desc=1&utf=y"  
+charset="UTF-8" type="text/javascript"></script>
+<noscript>
+<a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fstatic.feed.rbc.ru%2Frbc%2Finternal%2Frss.rbc.ru%2Frbc.ru%2Fnews.rss&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+
+</div>
+
+</body>
+<script defer src="/js/client.js"></script>
+</html>
+
