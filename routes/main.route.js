@@ -2,6 +2,7 @@ const router = require("express").Router();
 const res = require("express/lib/response");
 const { get } = require("express/lib/response");
 const { Bad_word, Good_word } = require("../db/models");
+//KFKFKFKFKFKFKF
 
 router
   .route("/")
@@ -29,6 +30,7 @@ router
         user_id: req.session.sid,
       });
       
+
 
       const wordBAd = await Bad_word.create({
         word: badWord,
